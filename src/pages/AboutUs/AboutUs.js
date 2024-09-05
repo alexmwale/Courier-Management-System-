@@ -18,12 +18,6 @@ export default function AboutusPage() {
             <div className='flex'>
 
                 <div>
-                    <div> <h1 className='flex space-x-4 sm:text-5xl? justify-end text-black font-extrabold cursor-pointer hover:text-blue-800'>
-                    Customer Feedback</h1></div>
-               
-
-                    <h2 className='font-extrabold sm:text-5xl? text-blue-800'>ABOUT US</h2>
-
 
                     <p className=" font-sans  font-bold first-letter:only: sm:text-preety">Welcome to delivery express!</p>
                     <p className=" font-sans  font-bold first-letter:only: sm:text-preety">Established  to overcome your challanges when Sending and receiving goods</p>
