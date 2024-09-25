@@ -54,17 +54,18 @@ export default function HomePage() {
         <h4 className="text-lg font-bold">FOLLOW SIMPLE STEPS</h4>
       </div>
 
-      <div className="relative">
-        <img src={form} alt="Forms icon" className="h-20 w-full max-w-xs mx-auto" />
-        <div className="absolute top-0 left-20">
-          <h2 className="font-bold text-black">Fill the Form</h2>
-          <p className="font-normal">
-            We specialize in the rapid, cost-effective, and reliable
-            <br />
-            delivery of couriers across different locations.
-          </p>
-        </div>
-      </div>
+      <div className="flex items-center gap-4">
+  <img src={form} alt="Forms icon" className="h-20 w-20" />
+  <div>
+    <h2 className="font-bold text-black">Fill the Form</h2>
+    <p className="font-normal">
+      We specialize in the rapid, cost-effective, and reliable
+      <br />
+      delivery of couriers across different locations.
+    </p>
+  </div>
+</div>
+
 
       <br />
       <div>
