@@ -8,7 +8,7 @@ import FDH from "../../Assets/FDH.jpg";
 import AirtelMoney from "../../Assets/Airtel Money.png";
 
 const Payment = () => {
-  return (
+  return ( 
     <div className="flex flex-col w-full">
       <Header />
       <NavBbar />

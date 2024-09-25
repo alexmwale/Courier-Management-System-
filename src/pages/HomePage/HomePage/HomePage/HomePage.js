@@ -1,20 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../Components/Header";
 import Footer from "../../../HomePage/HomePage/Footer";
 import form from "../../../../Assets/form.png";
 
 export default function HomePage() {
-  return (
-    <div>
-      <Header />
+  const [isOpen, setIsOpen] = useState(false);
 
+  return (
+    <div className="overflow-x-hidden px-4 sm:px-6 md:px-8">
+      {/* Header with Hamburger Menu */}
+      <header className="flex justify-between items-center py-4">
+        <Header />
+        <button
+          className="block sm:hidden focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <svg
+            className="w-8 h-8 text-gray-600"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </header>
+
+      {/* Mobile Menu */}
+      <nav className={`${isOpen ? "block" : "hidden"} sm:block`}>
+        <ul className="space-y-2">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      {/* Content */}
       <div>
         <h2>Your Packages Will Be</h2>
       </div>
       <h3 className="font-bold text-left">IN SAFE HANDS</h3>
 
       <div className="flex text-left">
-        <button className="bg-yellow-700 rounded-lg font-bold py-2 px-4">Enquire Now</button>
+        <button className="bg-yellow-700 rounded-lg font-bold py-2 px-4">
+          Enquire Now
+        </button>
       </div>
 
       <div className="flex items-center justify-center mb-6">
@@ -22,27 +55,46 @@ export default function HomePage() {
       </div>
 
       <div className="relative">
-        <img src={form} alt="Forms icon" className="h-20" />
+        <img src={form} alt="Forms icon" className="h-20 w-full max-w-xs mx-auto" />
         <div className="absolute top-0 left-20">
-          <h2 className="font-bold text-black ">Fill the Form</h2>
+          <h2 className="font-bold text-black">Fill the Form</h2>
           <p className="font-normal">
-            We specialize in the rapid, cost-effective, and reliable<br />
+            We specialize in the rapid, cost-effective, and reliable
+            <br />
             delivery of couriers across different locations.
           </p>
         </div>
       </div>
 
       <br />
-
-      <h1 className="font-bold">
-        We collect
-        <p className="font-normal">
-          Priority depends on the urgency of the<br />
-          package and the type of goods, catering to<br />
-          varying budgets.
-        </p>
-      </h1>
-      <br />
+      <div>
+        <div className="flex flex-row gap-4 p-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="darkgoldenrod"
+            className="w-14 h-14 bg-white text-black"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 6.878V6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 0 0 4.5 9v.878m13.5-3A2.25 2.25 0 0 1 19.5 9v.878m0 0a2.246 2.246 0 0 0-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0 1 21 12v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6c0-.98.626-1.813 1.5-2.122"
+            />
+          </svg>
+          <h1 className="font-bold">
+            We collect
+            <p className="font-normal">
+              Priority depends on the urgency of the
+              <br />
+              package and the type of goods, catering to
+              <br />
+              varying budgets.
+            </p>
+          </h1>
+        </div>
+      </div>
 
       <div className="flex flex-row gap-4 p-2">
         <svg
@@ -63,8 +115,10 @@ export default function HomePage() {
         <div>
           <h2 className="font-bold text-black">Delivery</h2>
           <p className="font-normal">
-            Our reliable logistics network enables the<br />
-            fastest and most dependable door-to-<br />
+            Our reliable logistics network enables the
+            <br />
+            fastest and most dependable door-to-
+            <br />
             door transit service in the industry.
           </p>
         </div>
@@ -76,8 +130,7 @@ export default function HomePage() {
         <br />
         PRODUCT DELIVERY
       </h4>
-      <br />
-      <br />
+
       <br />
       <Footer />
     </div>
